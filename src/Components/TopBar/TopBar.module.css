@@ -1,0 +1,15 @@
+.container{
+    @apply w-full flex flex-row justify-evenly items-center px-4 py-2 border-b border-gray-200;
+}
+
+.text{
+    @apply text-2xl font-bold w-full;
+}
+
+.links{
+    @apply flex flex-row w-full justify-end gap-4;
+}
+
+.link{
+    @apply text-purple-700;
+}

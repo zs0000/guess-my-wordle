@@ -1,0 +1,7 @@
+.container{
+    @apply w-screen h-full flex flex-col p-2;
+}
+
+.topBar{
+    @apply w-full;
+}
