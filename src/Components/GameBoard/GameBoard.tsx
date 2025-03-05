@@ -12,7 +12,7 @@ type AttemptElementMap = {
 }
 
 export default function GameBoard() {
-    const {currentWord, currentRow, currentColumn, currentWordAttempt} = useGameContext()
+    const {currentWord, currentRow,  currentWordAttempt} = useGameContext()
 
     const [attemptElementMap, setAttemptElementMap] = useState<AttemptElementMap>({
         0: {
@@ -42,12 +42,6 @@ export default function GameBoard() {
 
     })
 
-    const colorMap = {
-      "correct": " bg-green-500 ",
-      "present": " bg-yellow-500 ",
-      "absent": " bg-gray-500 ",
-      "blank": "",
-    }
 
 
 

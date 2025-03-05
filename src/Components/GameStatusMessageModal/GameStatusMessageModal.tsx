@@ -1,7 +1,6 @@
 import s from "./GameStatusMessageModal.module.css"
 import { useGameContext } from "../../Context/GameContext"
 import { useThemeContext } from "../../Context/ThemeContext"
-import { WordAttempt as WordAttemptModel } from "../../Models/WordAttempt"
 export default function GameStatusMessageModal() {
   const {currentWord, currentRow,
     gameStatus, setGameStatus, resetGame

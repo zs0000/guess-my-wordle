@@ -1,6 +1,6 @@
 import s from './GameBoarded.module.css'
 import { useGameContext } from '../../Context/GameContext'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useThemeContext } from '../../Context/ThemeContext';
 
 
