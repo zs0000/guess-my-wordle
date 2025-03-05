@@ -2,7 +2,6 @@ import { createContext, useState, useContext } from "react";
 
 import { WordAttempt as WordAttemptModel } from "../Models/WordAttempt";
 import { Word as WordModel } from "../Models/Word";
-import words from "../data/five_letter_words.json"
 
 
 type GameContextType = {
@@ -24,12 +23,7 @@ type GameContextType = {
     isResetting: boolean;
     setIsResetting: React.Dispatch<React.SetStateAction<boolean>>;
 }
-const getRandomWord = (): string =>
-    {
-        const word = words[Math.floor(Math.random() * words.length)];
-        console.log("word: ", word)
-        return word
-    }
+
 export const GameContext = createContext<GameContextType>({
     currentWord: new WordModel(),
     setCurrentWord: () => {},

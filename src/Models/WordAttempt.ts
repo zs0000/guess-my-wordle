@@ -1,4 +1,3 @@
-import { Word } from "./Word"
 import { ValidLetter } from "../types/Word"
 export class WordAttempt {
     public wordAttempt: string

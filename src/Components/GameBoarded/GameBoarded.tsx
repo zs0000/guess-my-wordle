@@ -3,24 +3,11 @@ import { useGameContext } from '../../Context/GameContext'
 import { useEffect, useState } from 'react'
 import { useThemeContext } from '../../Context/ThemeContext';
 
-type AttemptElement = {
-    word: string;
-    matchArray: string[];
-}
-
-type AttemptElementMap = {
-    [key: number]: AttemptElement;
-}
 
 export default function GameBoarded() {
-    const {currentWord, currentRow, currentColumn, currentWordAttempt, attemptArray, setGameStatus, isResetting, setIsResetting} = useGameContext()
+    const {currentWord, currentRow, attemptArray, setGameStatus, isResetting, setIsResetting} = useGameContext()
     const {themeColors} = useThemeContext()
 
-  const changeCellColors = () => {
-    const correctRow = currentRow - 1
-    const attempt = attemptArray[correctRow]
-    
-  }
 
   const completeWordValidation = async  (row: number) => { 
     /*
@@ -32,11 +19,9 @@ export default function GameBoarded() {
     let correctRow = row - 1
     const attempt = attemptArray[correctRow]
     const result = currentWord.compareWords(attempt)
-    console.log("attempt: ", attempt)
-    console.log("currentWord: ", currentWord)
+
     for(let i = 0; i < result.matchArray.length; i++){
      updateCell(correctRow, i, result.matchArray[i], attempt.wordAttemptArray[i])
-     // wait for 50ms before updating the next cell
      await new Promise(resolve => setTimeout(resolve, 170))
     }
     if(result.matchBoolean){

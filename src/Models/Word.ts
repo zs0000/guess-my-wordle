@@ -1,4 +1,4 @@
-import { ValidLetter, WordAttempt, LetterStatus } from "../types/Word"
+import { ValidLetter,  LetterStatus } from "../types/Word"
 import { WordAttempt as WordAttemptModel } from "./WordAttempt"
 import { words } from "../data/words"
 export class Word {
@@ -59,20 +59,7 @@ export class Word {
         return res
     }
 
-    private removeFirstOccurence(letter: ValidLetter, array: ValidLetter[]) {
-        let done = false
-        let newArray: ValidLetter[] = []
-        let i = 0
-        while(i < array.length) {
-            if(done && array[i] === letter) {
-                done = true
-            } else {
-                newArray.push(array[i])
-            }
-            i++
-        }
-        return newArray
-    }
+
 
     public compareWords(wordAttempt: WordAttemptModel) {
         let wordAttemptArray = wordAttempt.getWordAttemptArray(); // Player's guess
