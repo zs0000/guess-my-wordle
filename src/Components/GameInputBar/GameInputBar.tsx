@@ -23,20 +23,20 @@ export default function GameInputBar() {
   }
 
 
-  useEffect(() => {
-    if (inputRef.current) {
-        inputRef.current.focus();
-    }
+//   useEffect(() => {
+//     if (inputRef.current) {
+//         inputRef.current.focus();
+//     }
 
-    const handleClick = (e: MouseEvent) => {
-        if (inputRef.current && e.target !== inputRef.current) {
-            inputRef.current.focus();
-        }
-    };
+//     const handleClick = (e: MouseEvent) => {
+//         if (inputRef.current && e.target !== inputRef.current) {
+//             inputRef.current.focus();
+//         }
+//     };
 
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
-}, []);
+//     document.addEventListener("click", handleClick);
+//     return () => document.removeEventListener("click", handleClick);
+// }, []);
 
 
 
