@@ -1,5 +1,5 @@
 .container{
-    @apply w-screen h-full flex flex-col p-2;
+    @apply w-screen h-full min-h-screen flex flex-col p-2;
 }
 
 .topBar{

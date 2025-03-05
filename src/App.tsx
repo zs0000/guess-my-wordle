@@ -1,18 +1,24 @@
 import './App.css'
 import './index.css'
-import BaseComponent from './Components/BaseComponent/BaseComponent'
 import Layout from './Components/Layout/Layout'
 import { UserProvider } from './Context/UserContext'
+import GameComponent from './Components/GameComponent/GameComponent'
+import { ThemeContextProvider } from './Context/ThemeContext'
+import { GameContextProvider } from './Context/GameContext'
 
 function App() {
-
-
+  
   return (
-    <UserProvider>
-      <Layout>
-        <BaseComponent />
-      </Layout>
-    </UserProvider>
+    <ThemeContextProvider>
+      <UserProvider>
+        <GameContextProvider>
+        <Layout>
+
+          <GameComponent />
+        </Layout>
+        </GameContextProvider>
+      </UserProvider>
+    </ThemeContextProvider>
   )
 }
 

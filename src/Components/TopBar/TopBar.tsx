@@ -1,14 +1,17 @@
 import s from "./TopBar.module.css"
+import { useThemeContext } from "../../Context/ThemeContext"
 export default function TopBar() {
+
+  const {toggleTheme, themeColors} = useThemeContext();
   return (
-    <div className={s.container}>
+    <div className={`${s.container} ${themeColors.primaryText}`}>
         <span className={s.text}>
-            TheBarText
+            GuessMyWordle!
         </span>
-        <div className={s.links}>
-            <a className={s.link} href="#">Link1</a>
-            <a className={s.link} href="#">Link2</a>
-            <a className={s.link} href="#">Link3</a>
+        <div>
+          <button className={themeColors.primaryButton} onClick={toggleTheme}>
+             Toggle Theme
+          </button>
         </div>
     </div>
   )
