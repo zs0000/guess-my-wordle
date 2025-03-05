@@ -1,7 +1,7 @@
 import s from './GameInputBar.module.css'
 import { useThemeContext } from '../../Context/ThemeContext'
 import { useGameContext } from '../../Context/GameContext'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { ValidLetter } from '../../types/Word'
 import { WordAttempt as WordAttemptModel } from '../../Models/WordAttempt'
 export default function GameInputBar() {
