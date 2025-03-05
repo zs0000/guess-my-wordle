@@ -3,13 +3,11 @@ import GameInputBar from '../GameInputBar/GameInputBar'
 import s from './GameComponent.module.css'
 import { useGameContext } from '../../Context/GameContext'
 import GameStatusMessageModal from '../GameStatusMessageModal/GameStatusMessageModal'
-import { useEffect } from 'react'
-export default function GameComponent() {
-  const {gameStatus, currentWord, currentWordAttempt} = useGameContext()
 
-  useEffect(() => {
-    console.log("currentWord: ", currentWord)
-  },[currentWord])
+export default function GameComponent() {
+  const {gameStatus} = useGameContext()
+
+
 
   return (
     <div className={s.container}>
